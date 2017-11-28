@@ -45,6 +45,7 @@ document.onkeyup = function (event) {
             console.log(compGuess);
             guessCount = 6;
             document.getElementById("guesscount").innerHTML = guessCount;
+            guessList = [];
 
         } else {
 
