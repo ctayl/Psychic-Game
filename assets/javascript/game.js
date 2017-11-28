@@ -12,10 +12,6 @@ document.onkeyup = function (event) {
     // Determines which key was pressed.
     var userGuess = event.key;
 
-    alert("User guess: " + userGuess);
-    // var compGuess = alpha[Math.floor(Math.random() * (23 - 0) + 0)];
-    alert("Computer guess: " + compGuess);
-
 
     console.log(compGuess);
     console.log(userGuess);
