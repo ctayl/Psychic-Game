@@ -10,71 +10,24 @@
     <title>Document</title>
 </head>
 
-<body>
-    <script>
-        var userGuess;
-        var guesscount;
-        var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        var compGuess = alpha[Math.floor(Math.random() * (23 - 0) + 0)];
+<body style="margin:0 auto">
+    <script src="assets/javascript/game.js"></script>
+    <div class="container">
+        <header>
+            Psychic Game!
+        </header>
 
-        var wins = 0;
-        var losses = 0;
-        var guessCount = 6;
-        // This function is run whenever the user presses a key.
-        document.onkeyup = function (event) {
-
-            // Determines which key was pressed.
-            var userGuess = event.key;
-
-            alert("User guess: " + userGuess);
-            // var compGuess = alpha[Math.floor(Math.random() * (23 - 0) + 0)];
-            alert("Computer guess: " + compGuess);
-
-
-            console.log(compGuess);
-            console.log(userGuess);
-
-
-            // Win condition
-            if (userGuess === compGuess) {
-
-                // Add one to var wins
-                wins++;
-                console.log("wins:" + wins);
-                document.getElementById("wincount").innerHTML = wins;
-                // Randomly chooses a choice from the options array.
-                compGuess = alpha[Math.floor(Math.random() * (23 - 0) + 0)];
-
-                // Loss condition
-            } else if (userGuess != compGuess && guessCount == 0) {
-
-                // Add one to var losses
-                losses++;
-                console.log("losses:" + losses);
-                document.getElementById("losscount").innerHTML = losses;
-
-                // Randomly chooses a choice from the options array.
-                compGuess = alpha[Math.floor(Math.random() * (23 - 0) + 0)];
-                console.log(compGuess);
-                guessCount = 6;
-                
-
-                // User guess wrong
-            } else {
-
-                // Negates one from guesscount
-                guessCount--;
-                console.log("guesses left" + guessCount);
-                document.getElementById("guesscount").innerHTML = guessCount;
-
-            }
-        }
-
-    </script>
-
-    Guesses Left:<p id="guesscount"></p>
-    Wins:<p id="wincount"></p>
-    Losses:<p id="losscount"></p>
+        <div>
+            <h1>Guesses Left:<h1 id="guesscount">6</h1></h1>
+            <br>
+            <h1>Wins:<h1 id="wincount">0</h1></h1>
+            <br>
+            <h1>Losses:<h1 id="losscount">0</h1></h1>
+            <br>
+            <h1>Your Guesses:<h1 id="guessList"></h1></h1>
+            <br>
+        </div>
+    </div>
 
 </body>
 
